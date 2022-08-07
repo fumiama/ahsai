@@ -26,7 +26,7 @@ func TestAPI(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	err = SaveOggToWav(u, "test.wav")
+	err = SaveOggToFile(u, "test.wav")
 	if err != nil {
 		t.Fatal(err)
 	}
