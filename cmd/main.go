@@ -59,7 +59,7 @@ func main() {
 	for i, t := range lst {
 		u, err := spk.Speak(t)
 		if err != nil {
-			panic("line " + strconv.Itoa(i) + "error: " + err.Error())
+			panic("line " + strconv.Itoa(i) + " error: " + err.Error())
 		}
 		lst[i] = u
 		fmt.Print("\rread: ", (i+1)*100/len(lst), " %")
