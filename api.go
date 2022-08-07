@@ -1,3 +1,4 @@
+// Package ahsai AH Soft フリーテキスト音声合成 demo API
 package ahsai
 
 import (
@@ -35,11 +36,14 @@ var (
 	}
 )
 
+// Speaker is a particular setting of the API
 type Speaker struct {
 	id                                               uint32
 	Volume, Speed, Pitch, Range, Anger, Sadness, Joy float32
 }
 
+// NewSpeaker init default para of a speaker.
+// Use s.SetName() to set the real speaker.
 func NewSpeaker() (s Speaker) {
 	s.Volume = 1
 	s.Speed = 1
@@ -55,6 +59,7 @@ var (
 	ErrNoSuchSpeaker = errors.New("no such speaker")
 )
 
+// SetName set the speaker id.
 func (s *Speaker) SetName(name string) error {
 	id, ok := speakers[name]
 	if !ok {

@@ -52,3 +52,32 @@ func TestAPI(t *testing.T) {
 - ついなちゃん関西弁
 - 伊織弓鶴
 - 音街ウナ
+
+## commandline tool
+```bash
+go run cmd/main.go -h
+Usage:
+  -a float
+        anger
+  -b uint
+        border slience sample lenth (default 2048)
+  -d float
+        sadness
+  -f string
+        line-separated text to read
+  -h    display this help
+  -j float
+        joy
+  -n string
+        specify speaker (default "民安ともえ")
+  -o string
+        output wav file path (default "out.wav")
+  -p float
+        pitch (default 1)
+  -r float
+        range (default 1)
+  -s float
+        speed (default 1)
+  -v float
+        volume (default 1)
+```
