@@ -14,7 +14,10 @@ func cutstream(s beep.StreamSeekCloser) {
 	tmp := make([][2]float64, 1024)
 	c := 0
 	for c < 6 {
-		_, _ = s.Stream(tmp)
+		_, ok := s.Stream(tmp)
+		if !ok {
+			break
+		}
 		sum := (tmp[0][0] + tmp[0][1]) / 2
 		for j := 1; j < 1024; j++ {
 			sum += (tmp[j][0] + tmp[j][1]) / 2
