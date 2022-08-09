@@ -48,7 +48,7 @@ func main() {
 		t := sc.Text()
 		i++
 		if len([]rune(t)) > 100 {
-			panic("line " + strconv.Itoa(i) + ": too long (> 100 chars)")
+			panic("line " + strconv.Itoa(i+1) + ": too long (> 100 chars)")
 		}
 		lst = append(lst, t)
 	}
@@ -59,7 +59,7 @@ func main() {
 	for i, t := range lst {
 		u, err := spk.Speak(t)
 		if err != nil {
-			panic("line " + strconv.Itoa(i) + " error: " + err.Error())
+			panic("line " + strconv.Itoa(i+1) + " error: " + err.Error())
 		}
 		lst[i] = u
 		fmt.Print("\rread: ", (i+1)*100/len(lst), " %")
