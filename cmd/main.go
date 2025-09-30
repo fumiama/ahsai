@@ -7,8 +7,8 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/faiface/beep/wav"
 	"github.com/fumiama/ahsai"
+	"github.com/gopxl/beep/v2/wav"
 )
 
 func main() {

@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/faiface/beep"
-	"github.com/faiface/beep/vorbis"
-	"github.com/faiface/beep/wav"
+	"github.com/gopxl/beep/v2"
+	"github.com/gopxl/beep/v2/vorbis"
+	"github.com/gopxl/beep/v2/wav"
 )
 
 func cutstream(s beep.StreamSeekCloser) {

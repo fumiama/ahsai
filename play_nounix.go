@@ -7,9 +7,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/faiface/beep"
-	"github.com/faiface/beep/speaker"
-	"github.com/faiface/beep/vorbis"
+	"github.com/gopxl/beep/v2"
+	"github.com/gopxl/beep/v2/speaker"
+	"github.com/gopxl/beep/v2/vorbis"
 )
 
 // PlayOgg cut leading demo text and play directly
